@@ -13,7 +13,7 @@ from utilities.viewfunc import click_view
 path = "C:\\Users\\chihi\\Downloads\\list-cities-us-30j.xlsx"
 r = util.get_row_count(path,'list-cities-us-30j')
 class TestSearchdr():
-    @pytest.mark(smoke)
+    @pytest.mark.smoke
     @pytest.mark.usefixtures("initiate_driver")
     def test_end_to_end(self,initiate_driver):
         driver= initiate_driver
