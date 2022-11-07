@@ -2,9 +2,8 @@ import pytest
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
-
+#driver=webdriver.chrome(ChromeDriverManager().install())
 driver = webdriver.Chrome()
-
 
 @pytest.fixture()
 def initiate_driver():
