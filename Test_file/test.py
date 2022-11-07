@@ -28,50 +28,37 @@ class TestSearchdr():
         driver.find_element(by=By.XPATH,value=Continue_button).click()
         time.sleep(3)
 
-        # driver.find_element(by=By.XPATH,value=Search_for_name).send_keys("medical care")
-        # driver.find_element(by=By.XPATH, value=Search_for_name).send_keys(u'\ue007')
-        # time.sleep(3)
         driver.find_element(by=By.XPATH, value=primary_care).click()
         time.sleep(3)
         driver.find_element(by=By.XPATH, value=family_practice).click()
         time.sleep(3)
 
-        # for i in range(0, 9):
-        #     try:
-        #         elem = driver.find_element(by=By.XPATH, value='xbutton')
-        #         if elem.is_displayed():
-        #             elem.click()  # this will click the element if it is there
-        #
-        #     except NoSuchElementException:
-        #         pass
-        #
-        #     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, view_profile)))
-        #     driver.find_elements(by=By.XPATH, value=view_profile)[i].click()
-        #     time.sleep(3)
-        #
-        #     click_view().click_on_view_profile()
-        #     time.sleep(3)
-        #     driver.find_element(by=By.XPATH, value=back_button).click()
-        #     time.sleep(3)
         run().working()
+
         driver.back()
         time.sleep(3)
         driver.find_element(by=By.XPATH, value=primary_care).click()
         time.sleep(3)
         driver.find_element(by=By.XPATH,value=general_practice).click()
+
         run().working()
+
         driver.back()
         time.sleep(3)
         driver.find_element(by=By.XPATH, value=primary_care).click()
         time.sleep(3)
         driver.find_element(by=By.XPATH, value=internal_medicine).click()
+
         run().working()
+
         driver.back()
         time.sleep(3)
         driver.find_element(by=By.XPATH, value=primary_care).click()
         time.sleep(3)
         driver.find_element(by=By.XPATH, value=obstetrics_gynecology).click()
+
         run().working()
+
         driver.back()
         time.sleep(3)
         driver.find_element(by=By.XPATH, value=primary_care).click()
