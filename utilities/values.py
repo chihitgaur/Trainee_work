@@ -11,13 +11,12 @@ class run():
     def working(self):
         for i in range(0, 2):
             try:
-                #driver.switch_to.frame(driver.find_element(By.TAG_NAME, "iframe"))
+
                 elem = driver.find_element(by=By.XPATH, value=tab)
                 if elem.is_displayed():
-                    #driver.switch_to_alert().dismiss()
+
                     driver.find_element(by=By.XPATH,value=xbutton).click()
-                # else:
-                #     pass
+
             except NoSuchElementException:
 
                 WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, view_profile)))

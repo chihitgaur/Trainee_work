@@ -14,24 +14,19 @@ class processing():
 
     def bgprocessing(self):
 
-        # for i in range(3, r + 1):
-        #     city_name = util.read_data(path, 'list-cities-us-30j', i, 2)
-        #     state_name = util.read_data(path, 'list-cities-us-30j', i, 3)
-        #     Searching = city_name + "," + state_name
-
-
-
-
         for i in range(3, r + 1):
+            acc = driver.find_element(by=By.XPATH, value=Search_boxxx)
+            acc.clear()
             city_name = util.read_data(path, 'list-cities-us-30j', i, 2)
-            state_name = util.read_data(path, 'list-cities-us-30j', i, 3)
+            state_name = util.read_data(path, 'list-cities-us-30j', i, 4)
             Searching = city_name + "," + state_name
 
-            acc = driver.find_element(by=By.XPATH, value=Search_boxxx).click()
-            acc.clear()
+
 
             acc.send_keys(Searching)
             time.sleep(5)
+            driver.find_element(by=By.XPATH, value=taking_loc).click()
+            time.sleep(3)
 
             driver.find_element(by=By.XPATH, value=primary_care).click()
             time.sleep(3)

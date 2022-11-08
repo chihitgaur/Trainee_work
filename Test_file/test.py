@@ -11,8 +11,7 @@ import openpyxl
 import util
 from utilities.values import run
 from utilities.viewfunc import click_view
-path = "C:\\Users\\chihi\\Downloads\\list-cities-us-30j.xlsx"
-r = util.get_row_count(path,'list-cities-us-30j')
+
 class TestSearchdr():
     @pytest.mark.smoke
     @pytest.mark.usefixtures("initiate_driver")
@@ -36,37 +35,37 @@ class TestSearchdr():
 
         run().working()
 
-        # driver.back()
-        # time.sleep(3)
-        # driver.find_element(by=By.XPATH, value=primary_care).click()
-        # time.sleep(3)
-        # driver.find_element(by=By.XPATH,value=general_practice).click()
-        #
-        # run().working()
-        #
-        # driver.back()
-        # time.sleep(3)
-        # driver.find_element(by=By.XPATH, value=primary_care).click()
-        # time.sleep(3)
-        # driver.find_element(by=By.XPATH, value=internal_medicine).click()
-        #
-        # run().working()
-        #
-        # driver.back()
-        # time.sleep(3)
-        # driver.find_element(by=By.XPATH, value=primary_care).click()
-        # time.sleep(3)
-        # driver.find_element(by=By.XPATH, value=obstetrics_gynecology).click()
-        #
-        # run().working()
-        #
-        # driver.back()
-        # time.sleep(3)
-        # driver.find_element(by=By.XPATH, value=primary_care).click()
-        # time.sleep(3)
-        # driver.find_element(by=By.XPATH, value=pediatrics).click()
-        #
-        # run().working()
+        driver.back()
+        time.sleep(3)
+        driver.find_element(by=By.XPATH, value=primary_care).click()
+        time.sleep(3)
+        driver.find_element(by=By.XPATH,value=general_practice).click()
+
+        run().working()
+
+        driver.back()
+        time.sleep(3)
+        driver.find_element(by=By.XPATH, value=primary_care).click()
+        time.sleep(3)
+        driver.find_element(by=By.XPATH, value=internal_medicine).click()
+
+        run().working()
+
+        driver.back()
+        time.sleep(3)
+        driver.find_element(by=By.XPATH, value=primary_care).click()
+        time.sleep(3)
+        driver.find_element(by=By.XPATH, value=obstetrics_gynecology).click()
+
+        run().working()
+
+        driver.back()
+        time.sleep(3)
+        driver.find_element(by=By.XPATH, value=primary_care).click()
+        time.sleep(3)
+        driver.find_element(by=By.XPATH, value=pediatrics).click()
+
+        run().working()
         time.sleep(5)
         driver.back()
         time.sleep(5)
