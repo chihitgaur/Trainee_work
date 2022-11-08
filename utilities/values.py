@@ -9,7 +9,7 @@ from locators.locatosweb import view_profile, back_button, xbutton, tab
 from utilities.viewfunc import click_view
 class run():
     def working(self):
-        for i in range(0, 9):
+        for i in range(0, 2):
             try:
                 #driver.switch_to.frame(driver.find_element(By.TAG_NAME, "iframe"))
                 elem = driver.find_element(by=By.XPATH, value=tab)
