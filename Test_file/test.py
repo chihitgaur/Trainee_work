@@ -1,8 +1,9 @@
 import time
 import pytest
 import smoke
-
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
 
 from locators.locatosweb import *
 from ult.doingprocess import processing
@@ -24,10 +25,9 @@ class TestSearchdr():
         driver.find_element(by=By.XPATH,value=state_city).send_keys("Birmingham,AL")
         time.sleep(5)
         driver.find_element(by=By.XPATH,value=select_state).click()
-        time.sleep(2)
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, Continue_button)))
         driver.find_element(by=By.XPATH,value=Continue_button).click()
         time.sleep(3)
-
         driver.find_element(by=By.XPATH, value=primary_care).click()
         time.sleep(3)
         driver.find_element(by=By.XPATH, value=family_practice).click()
